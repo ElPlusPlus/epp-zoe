@@ -1,3 +1,4 @@
+from pymodbus import FramerType
 from pymodbus.client import AsyncModbusTcpClient
 from typing import Union, Optional
 from pyzoe.definition import modbus_map
@@ -22,7 +23,8 @@ class AsyncZoeClient:
         self.client = AsyncModbusTcpClient(
             host=self.host,
             port=self.port,
-            timeout=3
+            timeout=3,
+            framer=FramerType.TLS
         )
         self.unit_id = unit_id
 
