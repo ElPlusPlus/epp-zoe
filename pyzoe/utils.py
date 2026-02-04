@@ -17,13 +17,13 @@ def convert_to_u32(registers: List[int]) -> int:
     """Convert two registers to unsigned 32-bit integer"""
     if len(registers) != 2:
         raise ValueError("U32 conversion requires exactly 2 registers")
-    return (registers[0] << 16) | registers[1]
+    return (registers[1] << 16) | registers[0]
 
 def convert_to_s32(registers: List[int]) -> int:
     """Convert two registers to signed 32-bit integer"""
     if len(registers) != 2:
         raise ValueError("S32 conversion requires exactly 2 registers")
-    value = (registers[0] << 16) | registers[1]
+    value = (registers[1] << 16) | registers[0]
     # Convert to signed
     if value & 0x80000000:
         value -= 0x100000000
@@ -62,7 +62,7 @@ def split_u32_to_registers(value: int) -> List[int]:
         raise ValueError("U32 value out of range")
     high = (value >> 16) & 0xFFFF
     low = value & 0xFFFF
-    return [high, low]
+    return [low, high]
 
 def split_s32_to_registers(value: int) -> List[int]:
     """Split 32-bit signed integer into two 16-bit registers"""
@@ -83,7 +83,7 @@ def convert_to_i32(registers: List[int]) -> int:
     """Convert two registers to signed 32-bit integer (same as S32)"""
     if len(registers) != 2:
         raise ValueError("I32 conversion requires exactly 2 registers")
-    value = (registers[0] << 16) | registers[1]
+    value = (registers[1] << 16) | registers[0]
     if value & 0x80000000:
         value -= 0x100000000
     return value
