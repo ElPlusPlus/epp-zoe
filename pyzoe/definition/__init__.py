@@ -1,6 +1,7 @@
-from pyzoe.definition.register_names import serial_number_n
-from pyzoe.definition.register_values import serial_number
+from pyzoe.definition.register_names import *
+from pyzoe.definition.register_values import *
 
 modbus_map = {
-    serial_number_n: serial_number
+    serial_number_n: serial_number,
+    soc_n: soc
 }

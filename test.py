@@ -21,7 +21,8 @@ class BatteryController:
         """Get current battery status"""
         try:
             status = {
-                serial_number_n: (await  self.client.get(serial_number_n)).value
+                serial_number_n: (await  self.client.get(serial_number_n)).value,
+                soc_n: (await  self.client.get(soc_n)).value
             }
             return status
         except Exception as e:
