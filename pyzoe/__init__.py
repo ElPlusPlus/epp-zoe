@@ -24,7 +24,6 @@ class AsyncZoeClient:
             host=self.host,
             port=self.port,
             timeout=3,
-            framer=FramerType.RTU
         )
         self.unit_id = unit_id
 
