@@ -8,7 +8,7 @@ logger = logging.getLogger()
 #host='10.2.49.41',
 #host='10.2.49.70'
 class BatteryController:
-    def __init__(self, host='10.2.49.70', port=502):
+    def __init__(self, host='10.2.49.41', port=502):
         """Initialize the battery controller"""
         self.client = AsyncZoeClient(host=host, port=port)
         
@@ -25,7 +25,7 @@ class BatteryController:
                 serial_number_n: (await  self.client.get(serial_number_n)).value,
                 board_serial_number_n: (await self.client.get(board_serial_number_n)).value,
                 #pcs_running_state_n: (await  self.client.get(pcs_running_state_n)).value
-                soc_n: (await self.client.get(soc_n)).value,
+                #soc_n: (await self.client.get(soc_n)).value,
             }
             return status
         except Exception as e:
