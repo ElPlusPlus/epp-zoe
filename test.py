@@ -5,9 +5,9 @@ from pyzoe.definition.register_names import *
 
 logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger()
-
+#host='10.2.49.41',
 class BatteryController:
-    def __init__(self, host='10.2.49.41', port=502):
+    def __init__(self, host='10.2.49.70', port=502):
         """Initialize the battery controller"""
         self.client = AsyncZoeClient(host=host, port=port)
         
