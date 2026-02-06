@@ -32,6 +32,19 @@ class BatteryController:
                 emu_boot_ver_n: (await self.client.get(emu_boot_ver_n)).value,
                 #emu_h_ver: (await self.client.get(emu_h_ver)).value,
                 #emu_s_ver: (await self.client.get(emu_s_ver)).value,
+                history_year_month_n: (await self.client.get(history_year_month_n)).value,
+                history_day_hour_n: (await self.client.get(history_day_hour_n)).value,
+                history_minute_second_n: (await self.client.get(history_minute_second_n)).value,
+                history_systick_n: (await self.client.get(history_systick_n)).value,
+                history_pcs_charge_energy_n: (await self.client.get(history_pcs_charge_energy_n)).value,
+                history_pcs_discharge_energy_n: (await self.client.get(history_pcs_discharge_energy_n)).value,
+                history_battery_charge_energy_n: (await self.client.get(history_battery_charge_energy_n)).value,
+                history_battery_discharge_energy_n: (await self.client.get(history_battery_discharge_energy_n)).value,
+
+                operation_datetime_n: (await self.client.get(operation_datetime_n)).value,
+                operation_status_tag_n: (await self.client.get(operation_status_tag_n)).value,
+                operation_event_description_n: (await self.client.get(operation_event_description_n)).value,
+
             }
             return status
         except Exception as e:
