@@ -1,5 +1,8 @@
 device_communication_status_n = "DeviceCommunicationStatus"
 emu_status_n = "EmuStatus"
+emu_boot_ver_n = "EmyBootVersion"
+emu_s_ver = "EmuSVersion"
+emu_h_ver = "EmuHVersion"
 serial_number_n = "SerialNumber"
 board_serial_number_n = "BoardSerialNumber"
 soc_n = "SOC"
