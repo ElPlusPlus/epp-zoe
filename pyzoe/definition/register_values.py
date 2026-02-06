@@ -25,6 +25,11 @@ operation_status_tag = ModbusRegister(9612, 5, 3, ModbusType.STRING, ModbusUnit.
 operation_event_description = ModbusRegister(9617, 32, 3, ModbusType.STRING, ModbusUnit.NONE)
 
 
+#Battery
+battery_communication_status = ModbusRegister(20104, 1, 3, ModbusType.U16, ModbusUnit.NONE)
+battery_cluster_total_voltage = ModbusRegister(20105, 2, 3, ModbusType.U32, ModbusUnit.NONE, gain=0.01)
+battery_cluster_total_current = ModbusRegister(20107, 2, 3, ModbusType.I32, ModbusUnit.NONE, gain=0.01)
+battery_cluster_soc = ModbusRegister(20109, 1, 3, ModbusType.U16, ModbusUnit.PERCENTAGE, gain=0.1)
 
 
 soc = ModbusRegister(24682, 1, 3, ModbusType.U16, ModbusUnit.PERCENTAGE, gain=0.1)

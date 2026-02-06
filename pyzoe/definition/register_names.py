@@ -25,3 +25,9 @@ board_serial_number_n = "BoardSerialNumber"
 soc_n = "SOC"
 pcs_running_state_n = "PCSRunningState"
 grid_frequency_n = "GridFrequency"
+
+#Battery
+battery_communication_status_n = "BatteryCommunicationStatus"
+battery_cluster_total_voltage_n = "BatteryClusterTotalVoltage"
+battery_cluster_total_current_n = "BatteryClusterTotalCurrent"
+battery_cluster_soc_n = "BatteryClusterSoc"

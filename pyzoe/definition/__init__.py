@@ -23,4 +23,8 @@ modbus_map = {
     pcs_running_state_n: pcs_running_state,
     board_serial_number_n: board_serial_number,
     grid_frequency_n: grid_frequency,
+    battery_communication_status_n: battery_communication_status,
+    battery_cluster_total_voltage_n: battery_cluster_total_voltage,
+    battery_cluster_total_current_n: battery_cluster_total_current,
+    battery_cluster_soc_n: battery_cluster_soc,
 }

@@ -45,6 +45,11 @@ class BatteryController:
                 operation_status_tag_n: (await self.client.get(operation_status_tag_n)).value,
                 operation_event_description_n: (await self.client.get(operation_event_description_n)).value,
 
+                battery_communication_status_n: (await self.client.get(battery_communication_status_n)).value,
+                battery_cluster_total_voltage_n: (await self.client.get(battery_cluster_total_voltage_n)).value,
+                battery_cluster_total_current_n: (await self.client.get(battery_cluster_total_current_n)).value,
+                battery_cluster_soc_n: (await self.client.get(battery_cluster_soc_n)).value,
+
             }
             return status
         except Exception as e:
