@@ -28,6 +28,7 @@ class BatteryController:
                 soc_n: (await self.client.get(soc_n)).value,
                 grid_frequency_n: (await self.client.get(grid_frequency_n)).value,
                 device_communication_status_n: (await self.client.get(device_communication_status_n)).value
+                emu_status_n: (await self.client.get(emu_status_n)).value,
             }
             return status
         except Exception as e:

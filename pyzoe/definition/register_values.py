@@ -1,6 +1,7 @@
 from pyzoe.definition.models import ModbusRegister, ModbusType, ModbusUnit
 
 device_communication_status = ModbusRegister(26, 1, 3, ModbusType.U16, ModbusUnit.NONE)
+emu_status = ModbusRegister(56, 1, 3, ModbusType.U16, ModbusUnit.NONE)
 
 board_serial_number = ModbusRegister(4142, 12, 3, ModbusType.STRING, ModbusUnit.NONE)
 serial_number = ModbusRegister(4142, 12, 3, ModbusType.STRING, ModbusUnit.NONE)

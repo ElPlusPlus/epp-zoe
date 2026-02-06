@@ -1,4 +1,5 @@
 device_communication_status_n = "DeviceCommunicationStatus"
+emu_status_n = "EmuStatus"
 serial_number_n = "SerialNumber"
 board_serial_number_n = "BoardSerialNumber"
 soc_n = "SOC"
