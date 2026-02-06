@@ -1,3 +1,4 @@
+device_communication_status_n = "DeviceCommunicationStatus"
 serial_number_n = "SerialNumber"
 board_serial_number_n = "BoardSerialNumber"
 soc_n = "SOC"
