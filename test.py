@@ -22,10 +22,10 @@ class BatteryController:
         """Get current battery status"""
         try:
             status = {
-                #serial_number_n: (await  self.client.get(serial_number_n)).value,
-                #board_serial_number_n: (await self.client.get(board_serial_number_n)).value,
+                serial_number_n: (await  self.client.get(serial_number_n)).value,
+                board_serial_number_n: (await self.client.get(board_serial_number_n)).value,
                 #pcs_running_state_n: (await  self.client.get(pcs_running_state_n)).value
-                #soc_n: (await self.client.get(soc_n)).value,
+                soc_n: (await self.client.get(soc_n)).value,
                 grid_frequency_n: (await self.client.get(grid_frequency_n)).value,
             }
             return status

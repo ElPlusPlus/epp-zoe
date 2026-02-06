@@ -16,7 +16,7 @@ logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger()
 
 class AsyncZoeClient:
-    def __init__(self, host='192.168.1.6', port=502, unit_id=55):
+    def __init__(self, host, port=502, unit_id=1):
         """Initialize the Async Zeo Modbus client"""
         self.host = host
         self.port = port
